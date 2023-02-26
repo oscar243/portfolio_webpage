@@ -1,0 +1,213 @@
+//Blackparadox
+//Estilos
+//Version
+//Notas
+    
+//Colores
+$base: #060a0f
+$sec: #494949
+$outline: #f0790ba9
+$text: transparentize($sec, 0.5)
+
+//Barra nav
+//Estilos generales////
+/////////////////////////////////////
+
+a
+    margin: 0px
+    padding: 0px
+    @extend .tSlow
+    &:hover
+        color: $text
+
+h1, h2, h3, h4, h5, h6
+    color: $base
+
+p
+    color: $sec
+
+
+.tSlow
+    transition: all 0.5s ease-in-out
+    -webkit-transition: all 0.5s ease-in-out
+    -o-transition: all 0.5s ease-in-out
+
+.pad_100
+    padding: 100px 0px
+
+.center
+    text-align: center
+    margin: 0px auto
+
+.main-title
+    font-size: 60px
+    font-weight: bold
+    color: $base
+///Estilos de barra de navegación
+nav
+    width: 100%
+    background-color: transparent
+    padding: 10px 0px
+    position: fixed
+    border-bottom: 1px solid transparent
+    z-index: 100
+    @extend .tSlow
+    &:hover
+        background-color: white
+        padding: 25px 0px
+        border: 1px solid transparentize($base, .9)
+        .logo
+            img
+                width: 80%
+        ul
+            margin-top: 8px
+            li
+                a
+                    color: $text
+
+    .logo
+        img
+            width: 100%
+            @extend .tSlow
+    ul
+        margin: 0px
+        padding: 0px
+        margin-top: 8px
+        text-align: right
+        @extend .tSlow
+        .link-active
+            a
+                color: $base !important
+                &::after
+                    width: 100%
+                    background-color: $base
+                    @extend .tSlow
+        
+        li
+            display: inline-block
+            padding: 0px 10px
+
+            a
+                position: relative
+                text-decoration: none
+                font-size: 16px
+                text-transform: uppercase //Mayusculas
+                color: transparentize(white, 0.2)
+                @extend .tSlow
+                &::before
+                    content: ""
+                    position: absolute
+                    width: 100%
+                    background-color: transparent
+                    height: 1px
+                    @extend .tSlow
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 100%
+                    left: 0px
+                    width: 0%
+                    background-color: transparent
+                    height: 1px
+                    @extend .tSlow
+                &:hover
+                    color: $base
+                    &::before
+                       width: 0%
+                       background-color: $base
+                    &::after
+                        width: 100%
+                        background-color:  $base
+
+///Estilos de inputs
+
+input,
+select,
+option,
+textarea
+    width: 100%
+    padding: 10px 15px
+    border: 1px solid $base
+    margin: 5px 0px
+    opacity: 0.5
+    @extend .tSlow
+    &:hover,
+    &:focus
+        opacity: 1
+        color: $base
+
+textarea
+    max-width: 100%
+    min-width: 100%
+    min-height: 150px
+    max-height: 250px
+
+button
+    background-color: transparent
+    text-transform: uppercase
+    border: 1px $base
+    padding: 10px 20px
+    margin: 5px 0px
+    color: $base
+    font-size: 16px
+    letter-spacing: 1px
+    cursor: pointer
+    opacity: .7
+    @extend .tSlow
+    &:hover
+        opacity: 1
+        background-color: $base
+        color: white
+
+.black
+    background-color: $base
+    opacity: 1
+    color: white
+    &:hover
+        background-color: $outline
+        border: 1px solid $outline
+
+
+////////////Estilos SLIDER SLIPPRY
+
+#slider
+    backface-visibility: hidden
+    clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+    -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+    -o-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+
+#slippry
+    position: relative
+    h1,h2,h3,h4,h5,h6,p,a,button
+        position: absolute
+    p
+        width: 600px
+    .width_400
+        width: 400px
+    .white_bg
+        background-color: transparentize(white, 0.2)
+        padding: 5px 10px
+    .left
+        left: 200px
+    .left_150
+        left: 150px
+    .right
+        right: 200px
+    .top_125
+        top: 125px
+    .top_150
+        top: 150px
+    .top_200
+        top: 200px
+    .top_250
+        top: 250px
+    .top_300
+        top: 300px
+    .top_325
+        top: 325px
+    .top_375
+        top: 375px
+    .top_400
+        top: 400px
+    
+        

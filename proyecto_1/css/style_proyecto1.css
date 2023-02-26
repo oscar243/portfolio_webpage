@@ -1,0 +1,94 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 40px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  /* Estilos específicos para secciones */
+  
+  #intro {
+    text-align: justify;
+  }
+  
+  #ai-design h2 {
+    color: #4CAF50;
+  }
+  
+  #ai-design p {
+    color: #777;
+  }
+  
+  #ai-development h2 {
+    color: #2196F3;
+  }
+  
+  #ai-development p {
+    color: #777;
+  }
+  
+  #midjourney h2 {
+    color: #FF9800;
+  }
+  
+  #midjourney p {
+    color: #777;
+  }
+  
+  #conclusion h2 {
+    color: #F44336;
+  }
+  
+  #conclusion p {
+    color: #777;
+  }
+  
