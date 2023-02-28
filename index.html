@@ -93,32 +93,7 @@
     </div>
   </footer>
 
-    <!-- Script de Python para enviar correos electrónicos -->
-    <script type="text/python">
-      import smtplib
 
-      # Configurar el servidor SMTP de Gmail
-      server = smtplib.SMTP('smtp.gmail.com', 587)
-      server.starttls()
-      server.login('mistercangrejo74@gmail.com', 'Cangrejo_llave')
-
-      # Obtener los datos del formulario
-      name = input('Nombre: ')
-      email = input('Correo electrónico: ')
-      message = input('Mensaje: ')
-
-      # Crear el mensaje de correo electrónico
-      subject = f'Mensaje de {name} ({email})'
-      body = f'{message}\n\nDe: {name}\nCorreo electrónico: {email}'
-      message = f'Subject: {subject}\n\n{body}'
-
-      # Enviar el correo electrónico
-      server.sendmail('mistercangrejo74@gmail.com', 'oscarandres243@outlook.com', message)
-
-      # Cerrar la conexión con el servidor SMTP
-      server.quit()
-    </script>
-    
 </body>
 
 
