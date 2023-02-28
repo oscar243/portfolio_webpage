@@ -1,48 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
     <title>Formulario de contacto</title>
   </head>
   <body>
     <h1>Formulario de contacto</h1>
-    <form method="post">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message" required></textarea>
-      <br>
-      <button type="submit">Enviar</button>
+    <form method="post" action="enviar-formulario.php">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" name="submit" value="Enviar">
     </form>
-
-    <!-- Script de Python para enviar correos electrónicos -->
-    <script type="text/python">
-      import smtplib
-
-      # Configurar el servidor SMTP de Gmail
-      server = smtplib.SMTP('smtp.gmail.com', 587)
-      server.starttls()
-      server.login('mistercangrejo74@gmail.com', 'Cangrejo_llave')
-
-      # Obtener los datos del formulario
-      name = input('Nombre: ')
-      email = input('Correo electrónico: ')
-      message = input('Mensaje: ')
-
-      # Crear el mensaje de correo electrónico
-      subject = f'Mensaje de {name} ({email})'
-      body = f'{message}\n\nDe: {name}\nCorreo electrónico: {email}'
-      message = f'Subject: {subject}\n\n{body}'
-
-      # Enviar el correo electrónico
-      server.sendmail('mistercangrejo74@gmail.com', 'oscarandres243@outlook.com', message)
-
-      # Cerrar la conexión con el servidor SMTP
-      server.quit()
-    </script>
   </body>
 </html>
+
