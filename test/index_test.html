@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
     <meta charset="UTF-8">
-    <title>Mi sitio web</title>
-    <link rel="stylesheet" href="/test/style_test.css">
+    <title>Formulario de contacto</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Idioma</a>
-          <div class="dropdown-content">
-            <a href="#">Español</a>
-            <a href="#">Inglés</a>
-          </div>
-        </li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
+    <h1>Formulario de contacto</h1>
+    <form method="post">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" required></textarea>
+      <br>
+      <button type="submit">Enviar</button>
+    </form>
 
-    <h1>Bienvenido a mi sitio web</h1>
+    <!-- Script de Python para enviar correos electrónicos -->
+    <script type="text/python">
+      import smtplib
 
-    <p>Este es un sitio web multilingüe. Aquí puedes encontrar información sobre diversos temas en español e inglés.</p>
+      # Configurar el servidor SMTP de Gmail
+      server = smtplib.SMTP('smtp.gmail.com', 587)
+      server.starttls()
+      server.login('mistercangrejo74@gmail.com', 'Cangrejo_llave')
 
-    <h2>Sección 1</h2>
+      # Obtener los datos del formulario
+      name = input('Nombre: ')
+      email = input('Correo electrónico: ')
+      message = input('Mensaje: ')
 
-    <p>Contenido de la sección 1.</p>
+      # Crear el mensaje de correo electrónico
+      subject = f'Mensaje de {name} ({email})'
+      body = f'{message}\n\nDe: {name}\nCorreo electrónico: {email}'
+      message = f'Subject: {subject}\n\n{body}'
 
-    <h2>Sección 2</h2>
+      # Enviar el correo electrónico
+      server.sendmail('mistercangrejo74@gmail.com', 'oscarandres243@outlook.com', message)
 
-    <p>Contenido de la sección 2.</p>
-
-    <h2>Sección 3</h2>
-
-    <p>Contenido de la sección 3.</p>
-
-    <footer>
-      <p>Derechos de autor &copy; 2023 | Mi sitio web</p>
-    </footer>
+      # Cerrar la conexión con el servidor SMTP
+      server.quit()
+    </script>
   </body>
 </html>
