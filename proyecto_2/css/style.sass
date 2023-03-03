@@ -2,11 +2,11 @@
 //Estilos
 //Version
 //Notas
-    
+
 //Colores
 $base: #060a0f
 $sec: #494949
-$outline: #f0790ba9
+$outline: #e7880c9d
 $text: transparentize($sec, 0.5)
 
 //Barra nav
@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6
 
 p
     color: $sec
-
 
 .tSlow
     transition: all 0.5s ease-in-out
@@ -82,7 +81,7 @@ nav
                     width: 100%
                     background-color: $base
                     @extend .tSlow
-        
+
         li
             display: inline-block
             padding: 0px 10px
@@ -113,11 +112,11 @@ nav
                 &:hover
                     color: $base
                     &::before
-                       width: 0%
-                       background-color: $base
+                        width: 0%
+                        background-color: $base
                     &::after
                         width: 100%
-                        background-color:  $base
+                        background-color: $base
 
 ///Estilos de inputs
 
@@ -145,14 +144,15 @@ textarea
 button
     background-color: transparent
     text-transform: uppercase
-    border: 1px $base
+    border-width: 1px
+    border-color: transparentize($base, 0.2)
     padding: 10px 20px
     margin: 5px 0px
     color: $base
     font-size: 16px
     letter-spacing: 1px
     cursor: pointer
-    opacity: .7
+    opacity: .8
     @extend .tSlow
     &:hover
         opacity: 1
@@ -166,7 +166,6 @@ button
     &:hover
         background-color: $outline
         border: 1px solid $outline
-
 
 ////////////Estilos SLIDER SLIPPRY
 
@@ -183,7 +182,7 @@ button
     p
         width: 600px
     .width_400
-        width: 400px
+        width: 420px
     .white_bg
         background-color: transparentize(white, 0.2)
         padding: 5px 10px
@@ -209,5 +208,132 @@ button
         top: 375px
     .top_400
         top: 400px
-    
-        
+
+////Estilos de imagenes
+.rombo_effect
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    -o-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    @extend .tSlow
+    &:hover
+        -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)
+        -o-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)
+
+.rounded-circle
+    @extend .rombo_effect
+
+.servicio_img
+    width: 250px
+    height: 250px
+
+.diamante
+    display: block
+    position: relative
+    width: 80%
+    height: 80%
+    overflow: hidden
+    margin: 0px auto
+    background-image: url("../images/square_01.jpg")
+    background-size: 100%
+    background-position: center
+    background-repeat: no-repeat
+    @extend .rombo_effect
+    z-index: 200
+
+    ///Footer estilos
+
+footer
+    margin-top: -60px
+    width: 100%
+    background-color: $base
+    padding: 80px 0px
+    -webkit-clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%)
+    -o-clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%)
+    clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%)
+    p
+        margin: 0px
+        padding: 0px
+    .white
+        color: transparentize(white, .6)
+    ul
+        padding: 0px
+        margin: 0px
+        list-style: none
+        li
+            padding: 0px
+            margin: 0px
+            color: transparentize(white, 0.8)
+    a
+        opacity: 0.5
+        color: $outline
+    hr
+        border-radius: 10px
+        opacity: 0.92
+
+.tumblr
+    position: relative
+    float: left
+    margin: 0px
+    padding: 0px
+    width: 20%
+    cursor: pointer
+    opacity: 0.6
+    @extend .tSlow
+    &:hover
+        opacity: 1
+
+.copyr
+    padding: 10px 0px
+    background-color: lighten($base, 1)
+    text-align: left
+    p, a
+        margin: 0px
+        padding: 0px
+        color: transparentize(white, 0.7)
+    a
+        opacity: 0.5
+        color: $outline
+        text-decoration: none
+        @extend .tSlow
+        &:hover
+            opacity: 1
+
+.social
+    margin-top: 5px
+    li
+        display: inline-block
+        position: relative
+        margin: 0px 7px
+        float: left
+        width: 30px
+        height: 30px
+        cursor: pointer
+        text-align: center
+        transform: rotate(0deg)
+        backface-visibility: hidden
+        @extend .tSlow
+        i
+            font-size: 22px
+            color: transparentize(white, .8)
+            transform: rotate(0deg) translate(-3px, 3px)
+            backface-visibility: hidden
+            @extend .tSlow
+        &:hover
+            transform: rotate(45deg)
+            background-color: white
+            backface-visibility: hidden
+            @extend .tSlow
+            i
+                font-size: 22px
+                color: $base
+                transform: rotate(-45deg) translate(-3px, 3px)
+                backface-visibility: hidden
+                @extend .tSlow
+
+                                -webkit-transform: rotate(-45deg) translate(-3px, 3px)
+                -o-transform: : rotate(-45deg) translate(-3px, 3px)
+                transform: rotate(-45deg) translate(-3px, 3px)
+                backface-visibility: hidden
+                @extend .tSlow
+
