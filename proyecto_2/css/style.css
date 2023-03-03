@@ -14,7 +14,7 @@ p {
   color: #494949;
 }
 
-.tSlow, button, input,
+.tSlow, .social li:hover i, .social li:hover, .social li i, .social li, .copyr a, .tumblr, .rombo_effect, .diamante, .rounded-circle, button, input,
 select,
 option,
 textarea, nav ul li a::after, nav ul li a::before, nav ul li a, nav ul .link-active a::after, nav ul, nav .logo img, nav, a {
@@ -146,14 +146,15 @@ textarea {
 button {
   background-color: transparent;
   text-transform: uppercase;
-  border: 1px #060a0f;
+  border-width: 1px;
+  border-color: rgba(6, 10, 15, 0.8);
   padding: 10px 20px;
   margin: 5px 0px;
   color: #060a0f;
   font-size: 16px;
   letter-spacing: 1px;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 button:hover {
   opacity: 1;
@@ -167,8 +168,8 @@ button:hover {
   color: white;
 }
 .black:hover {
-  background-color: rgba(240, 121, 11, 0.662745098);
-  border: 1px solid rgba(240, 121, 11, 0.662745098);
+  background-color: rgba(231, 136, 12, 0.6156862745);
+  border: 1px solid rgba(231, 136, 12, 0.6156862745);
 }
 
 #slider {
@@ -189,7 +190,7 @@ button:hover {
   width: 600px;
 }
 #slippry .width_400 {
-  width: 400px;
+  width: 420px;
 }
 #slippry .white_bg {
   background-color: rgba(255, 255, 255, 0.8);
@@ -228,3 +229,137 @@ button:hover {
 #slippry .top_400 {
   top: 400px;
 }
+
+.rombo_effect, .diamante, .rounded-circle {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -o-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.rombo_effect:hover, .diamante:hover, .rounded-circle:hover {
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  -o-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.servicio_img {
+  width: 250px;
+  height: 250px;
+}
+
+.diamante {
+  display: block;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  margin: 0px auto;
+  background-image: url("../images/square_01.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 200;
+}
+
+footer {
+  margin-top: -60px;
+  width: 100%;
+  background-color: #060a0f;
+  padding: 80px 0px;
+  -webkit-clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+  -o-clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+}
+footer p {
+  margin: 0px;
+  padding: 0px;
+}
+footer .white {
+  color: rgba(255, 255, 255, 0.4);
+}
+footer ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+footer ul li {
+  padding: 0px;
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.2);
+}
+footer a {
+  opacity: 0.5;
+  color: rgba(231, 136, 12, 0.6156862745);
+}
+footer hr {
+  border-radius: 10px;
+  opacity: 0.92;
+}
+
+.tumblr {
+  position: relative;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  width: 20%;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.tumblr:hover {
+  opacity: 1;
+}
+
+.copyr {
+  padding: 10px 0px;
+  background-color: #070c13;
+  text-align: left;
+}
+.copyr p, .copyr a {
+  margin: 0px;
+  padding: 0px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.copyr a {
+  opacity: 0.5;
+  color: rgba(231, 136, 12, 0.6156862745);
+  text-decoration: none;
+}
+.copyr a:hover {
+  opacity: 1;
+}
+
+.social {
+  margin-top: 5px;
+}
+.social li {
+  display: inline-block;
+  position: relative;
+  margin: 0px 7px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  transform: rotate(0deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social li i {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.2);
+  transform: rotate(0deg) translate(-3px, 3px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social li:hover {
+  transform: rotate(45deg);
+  background-color: white;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social li:hover i {
+  font-size: 22px;
+  color: #060a0f;
+  transform: rotate(-45deg) translate(-3px, 3px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}/*# sourceMappingURL=style.css.map */
