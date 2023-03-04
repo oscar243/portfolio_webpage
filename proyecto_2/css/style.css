@@ -1,3 +1,7 @@
+.color_white_slider {
+  color: #aaa8a8;
+}
+
 a {
   margin: 0px;
   padding: 0px;
@@ -19,8 +23,6 @@ select,
 option,
 textarea, nav ul li a::after, nav ul li a::before, nav ul li a, nav ul .link-active a::after, nav ul, nav .logo img, nav, a {
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 
 .pad_100 {
@@ -175,9 +177,9 @@ button:hover {
 #slider {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%);
   -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%);
   -o-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%);
+  clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%);
 }
 
 #slippry {
@@ -257,7 +259,7 @@ button:hover {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 200;
+  z-index: 50;
 }
 
 footer {
@@ -362,4 +364,25 @@ footer hr {
   transform: rotate(-45deg) translate(-3px, 3px);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  transform: rotate(-45deg) translate(-3px, 3px);
+  backface-visibility: hidden;
+}
+
+.nav-overlay {
+  background-color: white;
+  border-bottom: 1px solid rgba(6, 10, 15, 0.1);
+  padding: 25px 0px;
+}
+.nav-overlay .logo img {
+  width: 80%;
+}
+.nav-overlay ul {
+  margin-top: 8px;
+}
+.nav-overlay ul li a {
+  color: rgba(73, 73, 73, 0.5);
+}
+
+.p_justify {
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */

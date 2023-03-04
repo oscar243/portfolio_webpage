@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UFT-8">
+    <meta charset="utf-8">
     <title>Blackparadox</title>
 
     <!--SEO-->
@@ -14,7 +14,7 @@
     <meta name="keywords" content="foto, fotografia, ...">
 
     <!-- Reposividad -->
-    <meta name "viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Social Cards-->
     <meta property="og:url" content="https//www.blackparadox.dom">
@@ -98,8 +98,8 @@
             </li>
 
             <li>
-                <h3 style="color:rgba(255, 255, 255, 0.445)" class="left_150 top_200 color_white">Más que fotografía</h3>
-                <p style="color: rgba(226, 232, 236, 0.747);" class="left_150 top_250 width_400">Cada imagen cuenta una
+                <h3 class="left_150 top_200 color_white_slider">Más que fotografía</h3>
+                <p class="left_150 top_250 width_400 color_white_slider">Cada imagen cuenta una
                     historia única y nos esforzamos por capturarla con creatividad y calidad.</p>
                 <button class="left_150 top_325 black">Contáctanos</button>
                 <img src="/proyecto_2/images/slide_03.jpg" alt="slide 3">
@@ -128,7 +128,7 @@
                     </div>
                     <div class="col-xl-6">
                         <h3><strong>Blackparadox</strong><span> va a tus eventos</span></h3>
-                        <p style="text-align: justify;">BlackParadox va contigo a tus eventos para capturar imágenes espectaculares y únicas. Con un
+                        <p class="p_justify">BlackParadox va contigo a tus eventos para capturar imágenes espectaculares y únicas. Con un
                             equipo de fotógrafos altamente capacitados y lo último en tecnología, garantizamos la más
                             alta calidad en cada fotografía. Simplemente disfruta de tu evento y déjanos capturar cada
                             momento especial para ti. Contáctanos hoy mismo y haz de tus eventos una experiencia
@@ -195,7 +195,7 @@
                         <li class="white small">Nosotros</li>
                         <li class="white small">Portafolio</li>
                         <li class="white small">Contacto</li>
-                        <hr>
+                        <li class="white small"><hr></li>
                         <li class="white small">Contrato</li>
                         <li class="white small">Servicios</li>
                         <li class="white small">Facturación</li>
@@ -221,18 +221,18 @@
 
                 <div class="col-xl-4">
                     <p class="white"><strong>Contacto</strong></p>
-                    <ul class="small white">
-                        <li>+555 1234 5678</li>
-                        <li>john.doe@mail.com</li>
-                        <li>John Doe / <i>Fotógrafo</i></li>
-                        <br>
-                        <p class="white"><strong>Redes Sociales</strong></p>
-                        <ul class="social">
-                            <li><i class="fa fa-facebook"></i></li>
-                            <li><i class="fa fa-twitter"></i></li>
-                            <li><i class="fa fa-youtube"></i></li>
-                            <li><i class="fa fa-tumblr fa-pencil"></i></li>
-                        </ul>
+                    <ul>
+                        <li class="small white">+555 1234 5678</li>
+                        <li class="small white">john.doe@mail.com</li>
+                        <li class="small white">John Doe / <i>Fotógrafo</i></li>
+                    </ul>
+                    <br>
+                    <p class="white small"><strong>Redes Sociales</strong></p>
+                    <ul class="social">
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-twitter"></i></li>
+                        <li><i class="fa fa-youtube"></i></li>
+                        <li><i class="fa fa-tumblr fa-pencil"></i></li>
                     </ul>
                 </div>
 
@@ -283,11 +283,24 @@
             $('.diamante').css({
                 height: dn_width
             });
+
+            /**Detectar alto de slider**/
+            var slider_height = $('#slider').height();
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                if (scroll >= $("#nosotros").offset().top -100){
+                    $("#nav").addClass("nav-overlay");
+                }
+                else{
+                    $("#nav").removeClass("nav-overlay");
+                }
+            });
+
         })
 
     </script>
 
-    <!-- Detectar ancho diamante para crear un rombo en height -->
+
 
 
 </body>
