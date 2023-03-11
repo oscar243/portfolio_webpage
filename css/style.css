@@ -148,3 +148,40 @@ body {
       padding: 20px;
     }
   }
+
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .project {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .project h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .project a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .project:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
