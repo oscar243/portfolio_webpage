@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi página personal</title>
+  <title>Oscar's website</title>
 
   <!--SEO-->
   <meta name="author" content="myweb">
@@ -26,6 +26,9 @@
 
   <!-- Hoja de estilos -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
   
 </head>
 
@@ -33,51 +36,74 @@
 
   <div class="container">
     <header>
-      <h1>Mi página personal</h1>
+      <!--<h1>Mi página personal</h1>-->
       <nav>
         <ul>
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href=#>Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#blog">Blog</a></li>
+
           <li class="dropdown">
-            <a href="#" class="dropbtn">Idioma</a>
+            <a href="#" class="dropbtn">Language</a>
             <div class="dropdown-content">
-              <a href="#">Español</a>
               <a href="#">English</a>
+              <a href="#">Español</a>
             </div>
           </li>
+
         </ul>
       </nav>
     </header>
+
     <main class="main">
+
       <section id="about" class="about">
-        <h2>Sobre mí</h2>
-        <p>¡Hola! Soy Oscar y me encanta programar. Me especializo en desarrollo web y me gusta aprender cosas nuevas cada día. Me considero una persona curiosa, creativa y apasionada por la tecnología.</p>
+        <h2>About me</h2>
+        <p>
+          I'm an electronic engineer with experience in industrial automation and embedded development. My technical skills include Python, C++, embedded programming, STM32, Git, Linux, and SQL. I'm also passionate about learning and am currently studying web development in my free time.
+          
+          In addition to my technical expertise, I'm fluent in Spanish and English and am currently learning German. I believe in the importance of staying active and healthy, and practice calisthenics regularly.
+          
+          I'm particularly interested in the field of AI and have completed several online courses and projects related to this topic. In my free time, I enjoy playing MMORPG games like Albion and World of Warcraft.
+          
+          I'm based in Colombia and am always looking for new opportunities to collaborate with other professionals and learn new skills. If you're interested in working together or learning more about my experience and skills, please don't hesitate to get in touch.</p>
       </section>
-      <section id="projects" class="projects">
-        <h2>Proyectos</h2>
-        <ul>
-          <li><a href="/proyecto_1/proyecto1.html">Proyecto 1</a></li>
-          <li><a href="/proyecto_2/index.html">Proyecto 2</a></li>
-          <li><a href="#">Proyecto 3</a></li>
-        </ul>
+      
+      
+      <section id="projects">
+        <div class="project">
+          <a href="/projects/project_1/proyecto1.html">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+          </a>
+        </div>
+        <div class="project">
+          <a href="/projects/project_2/index.html">
+            <img src="/images/project2.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+          </a>
+        </div>
+
       </section>
+
       <section id="contact" class="contact">
-        <h2>Contacto</h2>
+        <h2>Contact Me</h2>
         <form>
           <div>
-            <label for="name">Nombre:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name">
           </div>
           <div>
-            <label for="email">Correo electrónico:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email">
           </div>
           <div>
-            <label for="message">Mensaje:</label>
+            <label for="message">Message:</label>
             <textarea id="message" name="message"></textarea>
           </div>
-          <button type="submit">Enviar</button>
+          <button type="submit">Send</button>
         </form>
       </section>
     </main>
@@ -85,7 +111,7 @@
 
   <footer>
     <div class="container">
-      <p>Sígueme en:</p>
+      <p>Social</p>
       <ul>
         <li><a href="https://www.linkedin.com/in/oscar-virguez/">LinkedIn</a></li>
         <li><a href="https://github.com/oscar243">GitHub</a></li>
@@ -93,6 +119,22 @@
     </div>
   </footer>
 
+
+  <script>
+    
+    $(document).ready(function() {
+      /*alert("¡Hola! Me alegra verte aquí mientras construyo mi sitio web. Siéntete libre de echar un vistazo, pero ten en cuenta que todavía estoy trabajando en algunas cosas.");*/
+      
+    var userLang = navigator.language || navigator.userLanguage;
+    if (userLang === "es") {
+      alert("¡Hola! Me alegra verte aquí mientras construyo mi sitio web. Siéntete libre de echar un vistazo, pero ten en cuenta que todavía estoy trabajando en algunas cosas.");
+    } else {
+      alert("Hi! I'm glad to see you here while I'm building my website. Feel free to take a look around, but please keep in mind that I'm still working on some things.");
+    }
+    
+    });
+
+  </script>
 
 </body>
 
