@@ -1,3 +1,8 @@
+.tSlow
+    -webkit-transition: all 0.5s ease-in-out
+    -o-transition: all 0.5s ease-in-out
+    transition: all 0.5s ease-in-out
+
 .project
     width: 300px
     border: 1px solid #ccc
@@ -17,7 +22,94 @@
         text-decoration: none
         color: #333
     &:hover
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+
+.home
+    height: 100vh
+    background-image: url("/images/my_turtle.png")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+
+.saludo
+    padding-top: 210px
+    @media screen and (min-width: 768px) and (max-width: 991px)
+        padding-top: 180px
+    @media screen and (min-width: 320px) and (max-width: 767px)
+        padding-top: 150px
+
+.nav
+    width: 100%
+    background-color: transparent
+    position: fixed
+    z-index: 100
+    @extend .tSlow
+    &:hover
+        background-color: white
+
+.about
+    padding-top: 50px
+
+.projects_class
+    padding-top: 50px
+
+footer
+
+    p
+        margin: 0px
+        padding: 0px
+
+    li
+        font-size: small
+        a
+            color: black
+            text-decoration: none
+            &:hover
+                @extend .tSlow
+                color: #41607c
+                
+    ul
+        padding: 0px
+        margin: 0px
+        list-style: none
+
+.social
+    margin-top: 5px
+    li
+        display: inline-block
+        position: relative
+        margin: 0px 7px
+        float: left
+        width: 30px
+        height: 30px
+        cursor: pointer
+        text-align: center
+        transform: rotate(0deg)
+        color: black
+        backface-visibility: hidden
+        @extend .tSlow
+        a
+            font-size: 22px
+            color: black
+            transform: rotate(0deg) translate(-3px, 3px)
+            backface-visibility: hidden
+            @extend .tSlow
+        &:hover
+            transform: rotate(45deg)
+            background-color: black
+            backface-visibility: hidden
+            @extend .tSlow
+            a
+                font-size: 22px
+                color: white
+                transform: rotate(-45deg) translate(-3px, 3px)
+                backface-visibility: hidden
+                @extend .tSlow
+                transform: rotate(-45deg) translate(-3px, 3px)
+                backface-visibility: hidden
+                @extend .tSlow
 
 
-    
+.nav-overlay
+    @extend .tSlow
+    background-color: white

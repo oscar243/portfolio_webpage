@@ -1,3 +1,7 @@
+.tSlow, .nav-overlay, .social li:hover a, .social li:hover, .social li a, .social li, footer li a:hover, .nav {
+  transition: all 0.5s ease-in-out;
+}
+
 .project {
   width: 300px;
   border: 1px solid #ccc;
@@ -22,4 +26,108 @@
 }
 .project:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.home {
+  height: 100vh;
+  background-image: url("/images/my_turtle.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.saludo {
+  padding-top: 210px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .saludo {
+    padding-top: 180px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .saludo {
+    padding-top: 150px;
+  }
+}
+
+.nav {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  z-index: 100;
+}
+.nav:hover {
+  background-color: white;
+}
+
+.about {
+  padding-top: 50px;
+}
+
+.projects_class {
+  padding-top: 50px;
+}
+
+footer p {
+  margin: 0px;
+  padding: 0px;
+}
+footer li {
+  font-size: small;
+}
+footer li a {
+  color: black;
+  text-decoration: none;
+}
+footer li a:hover {
+  color: #41607c;
+}
+footer ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.social {
+  margin-top: 5px;
+}
+.social li {
+  display: inline-block;
+  position: relative;
+  margin: 0px 7px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  transform: rotate(0deg);
+  color: black;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social li a {
+  font-size: 22px;
+  color: black;
+  transform: rotate(0deg) translate(-3px, 3px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social li:hover {
+  transform: rotate(45deg);
+  background-color: black;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social li:hover a {
+  font-size: 22px;
+  color: white;
+  transform: rotate(-45deg) translate(-3px, 3px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotate(-45deg) translate(-3px, 3px);
+  backface-visibility: hidden;
+}
+
+.nav-overlay {
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */
