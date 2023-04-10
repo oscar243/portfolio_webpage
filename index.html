@@ -26,7 +26,8 @@
   <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
 
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 
   <script src="https://use.fontawesome.com/5851c76a01.js"></script>
 
@@ -104,10 +105,11 @@
         <div class="col-2 d-none d-md-block"></div>
 
         <div class="col-10">
-          <h1>hello im Oscar</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-          <button onclick="window.location.href='#projects'">more</button>
-
+          <h1>Welcome to my website!</h1>
+          <p>You will find information about me and my work.
+            <br><strong>Enjoy browsing! :)</strong>
+          </p>
+          <button onclick="window.location.href='#about'">About me</button>
         </div>
 
       </div>
@@ -185,7 +187,7 @@
         </form>
       </section-->
 
-<br><br>
+  <br><br>
   <hr>
   <footer>
     <div class="container">
@@ -213,7 +215,7 @@
         </div>
       </div>
     </div>
-<hr>
+    <hr>
   </footer>
 
 
@@ -245,16 +247,16 @@
     $(document).ready(function () {
       /*alert("¡Hola! Me alegra verte aquí mientras construyo mi sitio web. Siéntete libre de echar un vistazo, pero ten en cuenta que todavía estoy trabajando en algunas cosas.");*/
       var slider_height = $('#slider').height();
-            $(window).scroll(function(){
-                var scroll = $(window).scrollTop();
-                if (scroll >= 50){
-                    $(".nav").addClass("nav-overlay");
-                }
-                else{
-                    $(".nav").removeClass("nav-overlay");
-                }
-            });
-            $(window).scroll()
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 50) {
+          $(".nav").addClass("nav-overlay");
+        }
+        else {
+          $(".nav").removeClass("nav-overlay");
+        }
+      });
+      $(window).scroll()
 
     });
 

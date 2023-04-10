@@ -35,6 +35,23 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+.home button {
+  background-image: linear-gradient(to bottom, #00B5A5, #003F5C);
+  border: none;
+  color: #ffffff;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.home button:hover {
+  background-image: linear-gradient(to bottom, #2c3e50, #2980b9);
+}
 
 .saludo {
   padding-top: 210px;
